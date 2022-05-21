@@ -3,7 +3,7 @@ import { Task, storeTask, deleteTask, editTask } from "../js/Task";
 let NewTask
 
 beforeEach(() => {
-  NewTask = Task("do laundry", "22/05/2022", "description");
+  NewTask = Task("do laundry", "22/05/2022", "high", "description");
 })
 
 describe("tasks", () => {
@@ -17,5 +17,8 @@ describe("tasks", () => {
     deleteTask(NewTask, taskList);
     expect(taskList).not.toContain(NewTask);
   });
-  test.todo("can be edited");
+  test("can be edited", () => {
+    editTask(NewTask, "priority", "low");
+    expect(NewTask.priority).toBe("low");
+  });
 })
