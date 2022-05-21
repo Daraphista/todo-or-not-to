@@ -4,7 +4,7 @@
   "description": "A web app that helps you organize your workflow.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
