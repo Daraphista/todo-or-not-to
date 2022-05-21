@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Daraphista/todo-or-not-to/issues"
   },
-  "homepage": "https://github.com/Daraphista/todo-or-not-to#readme"
+  "homepage": "https://github.com/Daraphista/todo-or-not-to#readme",
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
 }
