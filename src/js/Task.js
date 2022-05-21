@@ -12,7 +12,7 @@ const deleteTask = (task, array) => {
 }
 
 const editTask = (task, property, value) => {
-
+  task[property] = value;
 }
 
 export { Task, storeTask, deleteTask, editTask };
