@@ -17,5 +17,8 @@ describe("projects", () => {
     deleteProject(newProject, projectList);
     expect(projectList).not.toContain(newProject);
   });
-  test.todo("can be edited");
+  test("can be edited", () => {
+    editProject(newProject, "title", "Laundry");
+    expect(newProject.title).toBe("Laundry");
+  });
 });
