@@ -12,6 +12,10 @@ describe("projects", () => {
     storeProject(newProject, projectList);
     expect(projectList).toContain(newProject);
   });
-  test.todo("can be deleted");
+  test("can be deleted", () => {
+    const projectList = [newProject];
+    deleteProject(newProject, projectList);
+    expect(projectList).not.toContain(newProject);
+  });
   test.todo("can be edited");
 });
