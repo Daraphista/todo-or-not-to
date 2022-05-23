@@ -12,7 +12,7 @@ const deleteProject = (project, array) => {
 }
 
 const editProject = (project, property, value) => {
-  
+  project[property] = value;
 }
 
 export default Project;
