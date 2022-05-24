@@ -1,5 +1,5 @@
+// Initialize firebase in project
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBJOoRvmW5p3Z0ojgH8TU3E5aQ52NRdxuw",
@@ -12,6 +12,20 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+// Initialize firestore in project
+import { getFirestore, doc, getDoc, onSnapshot } from "firebase/firestore";
+
 const database = getFirestore(app);
 
-export { database };
+let userData;
+
+// Read and listen to user data and it's changes
+const unsub = onSnapshot(
+  doc(database, "user-data", "iONDlZkvsAWMD64xItJEvUpGcWp2"),
+  (doc) => {
+    const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
+    console.log(source, " data: ", doc.data());
+    userData = doc.data();
+  }
+);
