@@ -15,7 +15,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Initialize Firebase Authentication in project
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 const auth = getAuth();
 
@@ -33,7 +37,21 @@ const createUser = async (email, password) => {
   }
 };
 
-export { createUser };
+const signIn = async (email, password) => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const { user } = userCredential;
+    return user;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { createUser, signIn, auth };
 
 // Initialize firestore in project
 import { getFirestore, doc, getDoc, onSnapshot } from "firebase/firestore";
