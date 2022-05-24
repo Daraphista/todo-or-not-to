@@ -39,13 +39,7 @@ const createUser = async (email, password) => {
 
 const signIn = async (email, password) => {
   try {
-    const userCredential = await signInWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-    const { user } = userCredential;
-    return user;
+    signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.log(error);
   }
