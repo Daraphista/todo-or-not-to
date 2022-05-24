@@ -1,10 +1,10 @@
 import { Task, storeTask, deleteTask, editTask } from "../js/Task";
 
-let NewTask
+let NewTask;
 
 beforeEach(() => {
   NewTask = Task("do laundry", "22/05/2022", "high", "description");
-})
+});
 
 describe("tasks", () => {
   test("can be stored", () => {
@@ -21,4 +21,4 @@ describe("tasks", () => {
     editTask(NewTask, "priority", "low");
     expect(NewTask.priority).toBe("low");
   });
-})
+});

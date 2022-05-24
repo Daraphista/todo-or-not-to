@@ -1,10 +1,14 @@
-import Project, { storeProject, deleteProject, editProject } from "../js/Project";
+import Project, {
+  storeProject,
+  deleteProject,
+  editProject,
+} from "../js/Project";
 
 let newProject;
 
 beforeEach(() => {
   newProject = Project("House chores");
-})
+});
 
 describe("projects", () => {
   test("can be stored", () => {

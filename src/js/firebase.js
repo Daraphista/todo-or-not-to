@@ -8,7 +8,7 @@ const firebaseConfig = {
   storageBucket: "todo-or-not-to.appspot.com",
   messagingSenderId: "659746874836",
   appId: "1:659746874836:web:1c51f5af18f4b66b296241",
-  measurementId: "G-N2P5G75KEE"
+  measurementId: "G-N2P5G75KEE",
 };
 
 const app = initializeApp(firebaseConfig);
