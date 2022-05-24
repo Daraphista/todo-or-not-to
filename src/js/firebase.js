@@ -31,7 +31,7 @@ const createUser = async (email, password) => {
   }
 };
 
-const signIn = async (email, password) => {
+const signIn = (email, password) => {
   try {
     signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
