@@ -25,13 +25,7 @@ const auth = getAuth();
 
 const createUser = async (email, password) => {
   try {
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-    const { user } = userCredential;
-    return user;
+    createUserWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.log(error);
   }
