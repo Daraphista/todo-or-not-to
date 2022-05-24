@@ -23,9 +23,15 @@ import {
 
 const auth = getAuth();
 
-const createUser = (email, password) => {
+const createUser = async (email, password) => {
   try {
-    createUserWithEmailAndPassword(auth, email, password);
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const { user } = userCredential;
+    return user;
   } catch (error) {
     console.log(error);
   }
