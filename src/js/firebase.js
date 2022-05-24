@@ -23,7 +23,7 @@ import {
 
 const auth = getAuth();
 
-const createUser = async (email, password) => {
+const createUser = (email, password) => {
   try {
     createUserWithEmailAndPassword(auth, email, password);
   } catch (error) {
