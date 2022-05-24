@@ -1,4 +1,5 @@
 // Initialize firebase in project
+import { async } from "@firebase/util";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
@@ -12,6 +13,27 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Authentication in project
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+const auth = getAuth();
+
+const createUser = async (email, password) => {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const { user } = userCredential;
+    return user;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { createUser };
 
 // Initialize firestore in project
 import { getFirestore, doc, getDoc, onSnapshot } from "firebase/firestore";
