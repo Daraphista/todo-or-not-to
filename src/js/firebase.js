@@ -57,7 +57,7 @@ const signOutUser = (unsub) => {
   })
 }
 
-export { createUser, signIn, signOutUser };
+export { createUser, signIn, signOutUser, auth };
 
 // Initialize firestore in project
 import { getFirestore } from "firebase/firestore";
