@@ -33,3 +33,13 @@ signUpForm.addEventListener("submit", (e) => {
   createUser(email, password);
 });
 
+// Log out functionality
+
+import { signOut } from "firebase/auth";
+
+const logOutButton = document.querySelector(".logout");
+
+logOutButton.addEventListener("click", () => {
+  signOut(auth);
+});
+
