@@ -54,18 +54,8 @@ const signIn = async (email, password) => {
 export { createUser, signIn, auth };
 
 // Initialize firestore in project
-import { getFirestore, doc, getDoc, onSnapshot } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const database = getFirestore(app);
 
-let userData;
-
-// Read and listen to user data and it's changes
-const unsub = onSnapshot(
-  doc(database, "user-data", "iONDlZkvsAWMD64xItJEvUpGcWp2"),
-  (doc) => {
-    const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
-    console.log(source, " data: ", doc.data());
-    userData = doc.data();
-  }
-);
+export { database };
