@@ -51,13 +51,7 @@ const signIn = async (email, password) => {
   }
 };
 
-const signOutUser = (unsub) => {
-  signOut(auth).then(() => {
-    unsub();
-  })
-}
-
-export { createUser, signIn, signOutUser, auth };
+export { createUser, signIn, auth };
 
 // Initialize firestore in project
 import { getFirestore } from "firebase/firestore";
