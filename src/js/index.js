@@ -43,3 +43,25 @@ logOutButton.addEventListener("click", () => {
   signOut(auth);
 });
 
+// Get user data when signed in
+
+import { onAuthStateChanged } from "firebase/auth";
+import { collection, query, onSnapshot } from "firebase/firestore";
+import { database, auth } from "./firebase";
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log(user);
+
+    const searchQuery = query(
+      collection(database, `user-data/${user.uid}/containers`)
+    );
+    onSnapshot(searchQuery, (querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.data());
+      });
+    });
+  } else {
+    console.log("can't get user data");
+  }
+});
