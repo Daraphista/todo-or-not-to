@@ -1,5 +1,4 @@
 // Initialize firebase in project
-import { async } from "@firebase/util";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
