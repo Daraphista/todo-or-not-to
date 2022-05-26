@@ -62,6 +62,42 @@ onAuthStateChanged(auth, (user) => {
       });
     });
   } else {
-    console.log("can't get user data");
+    console.log("user signed out");
+  }
+});
+
+// Set new user data when signed in
+
+const setNewUserData = (user) => {
+  // set document using user id as it's id
+  setDoc(doc(database, "user-data", user.uid), {
+    email: user.email,
+  });
+
+  // set containers collection in user document
+  setDoc(doc(database, `user-data/${user.uid}/containers`, "inbox"), {
+    title: "inbox",
+  });
+  setDoc(doc(database, `user-data/${user.uid}/containers`, "today"), {
+    title: "today",
+  });
+  setDoc(doc(database, `user-data/${user.uid}/containers`, "projects"), {
+    title: "projects",
+  });
+};
+
+import { doc, getDoc, setDoc } from "firebase/firestore";
+
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    const docRef = doc(database, "user-data", user.uid);
+    const document = await getDoc(docRef);
+    if (document.data()) {
+      console.log("user has data", document.data());
+    } else {
+      console.log("user hasn't any data");
+
+      setNewUserData(user);
+    }
   }
 });
