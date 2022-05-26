@@ -49,18 +49,21 @@ import { onAuthStateChanged } from "firebase/auth";
 import { collection, query, onSnapshot } from "firebase/firestore";
 import { database, auth } from "./firebase";
 
+const getContainers = (id) => {
+  const collectionQuery = query(
+    collection(database, `user-data/${id}/containers`)
+  );
+  onSnapshot(collectionQuery, (querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      console.log(doc.data());
+    });
+  });
+};
+
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log(user);
-
-    const searchQuery = query(
-      collection(database, `user-data/${user.uid}/containers`)
-    );
-    onSnapshot(searchQuery, (querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(doc.data());
-      });
-    });
+    getContainers(user.uid);
   } else {
     console.log("user signed out");
   }
