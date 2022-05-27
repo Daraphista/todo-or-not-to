@@ -12,8 +12,8 @@ export { createProject };
 
 // function that edits a project to another collection
 
-const editProject = (document, property, value) => {
-  setDoc(document, property, value, { merge: true });
+const editProject = (document, updatedDocument) => {
+  setDoc(document, updatedDocument, { merge: true });
 };
 
 export { editProject };
