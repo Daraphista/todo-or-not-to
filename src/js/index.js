@@ -18,11 +18,17 @@ handleSignIn(
 
 import { handleSignUp } from "./authentication";
 
-const signUpForm = document.querySelector(".sign-up");
-const emailInput = document.querySelector(".sign-up #email");
-const passwordInput = document.querySelector(".sign-up #password");
+const signUpForm = {
+  signUpForm: document.querySelector(".sign-up"),
+  emailInput: document.querySelector(".sign-up #email"),
+  passwordInput: document.querySelector(".sign-up #password"),
+};
 
-handleSignUp(signUpForm, emailInput, passwordInput);
+handleSignUp(
+  signUpForm.signUpForm,
+  signUpForm.emailInput,
+  signUpForm.passwordInput
+);
 
 // Log out functionality
 
