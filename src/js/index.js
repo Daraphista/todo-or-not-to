@@ -3,7 +3,7 @@
 import { handleSignIn } from "./authentication";
 
 const signInForm = document.querySelector(".sign-in");
-const emailInput = document.getElementById("email");
+const emailInput = document.querySelector(".sign-in #email");
 const passwordInput = document.getElementById("password");
 
 handleSignIn(signInForm, emailInput, passwordInput);
