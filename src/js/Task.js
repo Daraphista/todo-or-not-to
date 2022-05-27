@@ -24,3 +24,13 @@ const editTask = (document, updatedDocument) => {
 };
 
 export { editTask };
+
+// function that can delete task
+
+import { deleteDoc } from "firebase/firestore";
+
+const deleteTask = (document) => {
+  deleteDoc(document);
+};
+
+export { deleteTask };
