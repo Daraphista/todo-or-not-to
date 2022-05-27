@@ -35,12 +35,19 @@ describe("Projects", () => {
   });
 
   describe("deleteProject", () => {
+    let document;
+
+    beforeEach(() => {
+      document = {
+        _key: { path: { segments: { join: function () {} } } },
+      };
+    });
+
     test("calls deleteDoc()", () => {
-      deleteProject();
+      deleteProject(document);
       expect(deleteDoc).toBeCalled();
     });
     test("calls deleteDoc() with arguments from deleteProject", () => {
-      const document = {};
       deleteProject(document);
       expect(deleteDoc).toBeCalledWith(document);
     });
