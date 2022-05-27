@@ -1,4 +1,4 @@
-// Get user data functionality
+// Get user data
 
 import {
   collection,
