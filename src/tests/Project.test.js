@@ -28,10 +28,9 @@ describe("Projects", () => {
     });
     test("calls the setDoc() function with arguments from editProject", () => {
       const document = {};
-      const property = "";
-      const value = undefined;
-      editProject(document, property, value);
-      expect(setDoc).toBeCalledWith(document, property, value, { merge: true });
+      const updatedDocument = {};
+      editProject(document, updatedDocument);
+      expect(setDoc).toBeCalledWith(document, updatedDocument, { merge: true });
     });
   });
 });
