@@ -1,5 +1,5 @@
-import { createTask, editTask } from "../js/Task";
-import { addDoc, setDoc } from "firebase/firestore";
+import { createTask, deleteTask, editTask } from "../js/Task";
+import { addDoc, deleteDoc, setDoc } from "firebase/firestore";
 
 jest.mock("firebase/firestore");
 
@@ -14,6 +14,12 @@ describe("Tasks", () => {
     test("calls setDoc()", () => {
       editTask();
       expect(setDoc).toBeCalled();
+    });
+  });
+  describe("deleteTask", () => {
+    test("calls deleteDoc()", () => {
+      deleteTask();
+      expect(deleteDoc).toBeCalled();
     });
   });
 });
