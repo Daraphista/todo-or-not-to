@@ -32,4 +32,14 @@ const handleSignUp = (signUpForm, emailInput, passwordInput) => {
 
 export { handleSignUp };
 
-// TODO move sign out functionality here
+// move sign out functionality here
+
+import { signOut } from "firebase/auth";
+
+const handleSignOut = (logOutButton) => {
+  logOutButton.addEventListener("click", () => {
+    signOut(auth);
+  });
+};
+
+export { handleSignOut };
