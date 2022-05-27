@@ -1,5 +1,5 @@
-import { addDoc } from "firebase/firestore";
-import { createProject } from "../js/Project";
+import { addDoc, setDoc } from "firebase/firestore";
+import { createProject, editProject } from "../js/Project";
 
 jest.mock("firebase/firestore");
 
@@ -18,6 +18,20 @@ describe("Projects", () => {
       createProject(collection, title);
 
       expect(addDoc).toHaveBeenCalledWith(collection, { title: title });
+    });
+  });
+
+  describe("editProject", () => {
+    test("calls setDoc()", () => {
+      editProject();
+      expect(setDoc).toBeCalled();
+    });
+    test("calls the setDoc() function with arguments from editProject", () => {
+      const document = {};
+      const property = "";
+      const value = undefined;
+      editProject(document, property, value);
+      expect(setDoc).toBeCalledWith(document, property, value, { merge: true });
     });
   });
 });
