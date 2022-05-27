@@ -63,25 +63,8 @@ onAuthStateChanged(auth, (user) => {
 
 // Set new user data when signed in
 
-const setNewUserData = (user) => {
-  // set document using user id as it's id
-  setDoc(doc(database, "user-data", user.uid), {
-    email: user.email,
-  });
-
-  // set containers collection in user document
-  setDoc(doc(database, `user-data/${user.uid}/containers`, "inbox"), {
-    title: "inbox",
-  });
-  setDoc(doc(database, `user-data/${user.uid}/containers`, "today"), {
-    title: "today",
-  });
-  setDoc(doc(database, `user-data/${user.uid}/containers`, "projects"), {
-    title: "projects",
-  });
-};
-
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
+import { setNewUserData } from "./user-data";
 
 onAuthStateChanged(auth, async (user) => {
   if (user) {
