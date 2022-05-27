@@ -14,3 +14,14 @@ const createTask = (collection, title, description, priority, date) => {
 };
 
 export { createTask };
+
+// function that can edit task
+
+import { setDoc } from "firebase/firestore";
+import { database } from "./firebase";
+
+const editTask = (document, updatedDocument) => {
+  setDoc(database, document, updatedDocument);
+};
+
+export { editTask };
