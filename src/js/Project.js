@@ -2,10 +2,7 @@
 
 import {
   addDoc,
-  collection,
   deleteDoc,
-  query,
-  QuerySnapshot,
   setDoc,
 } from "firebase/firestore";
 
