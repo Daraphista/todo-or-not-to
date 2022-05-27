@@ -18,10 +18,9 @@ export { createTask };
 // function that can edit task
 
 import { setDoc } from "firebase/firestore";
-import { database } from "./firebase";
 
 const editTask = (document, updatedDocument) => {
-  setDoc(database, document, updatedDocument);
+  setDoc(document, updatedDocument, { merge: true });
 };
 
 export { editTask };
