@@ -39,5 +39,10 @@ describe("Projects", () => {
       deleteProject();
       expect(deleteDoc).toBeCalled();
     });
+    test("calls deleteDoc() with arguments from deleteProject", () => {
+      const document = {};
+      deleteProject(document);
+      expect(deleteDoc).toBeCalledWith(document);
+    });
   });
 });
