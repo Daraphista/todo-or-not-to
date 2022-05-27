@@ -1,6 +1,6 @@
 // function that creates a project document in firestore
 
-import { addDoc, collection, setDoc } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, setDoc } from "firebase/firestore";
 
 const createProject = (collection, title) => {
   addDoc(collection, {
@@ -17,3 +17,11 @@ const editProject = (document, updatedDocument) => {
 };
 
 export { editProject };
+
+// function that deletes a project and it's subcollections
+
+const deleteProject = (document) => {
+  deleteDoc(document);
+};
+
+export { deleteProject };
