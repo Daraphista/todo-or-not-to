@@ -2,11 +2,17 @@
 
 import { handleSignIn } from "./authentication";
 
-const signInForm = document.querySelector(".sign-in");
-const emailInput = document.querySelector(".sign-in #email");
-const passwordInput = document.querySelector(".sign-in #password");
+const signInForm = {
+  signInForm: document.querySelector(".sign-in"),
+  emailInput: document.querySelector(".sign-in #email"),
+  passwordInput: document.querySelector(".sign-in #password"),
+};
 
-handleSignIn(signInForm, emailInput, passwordInput);
+handleSignIn(
+  signInForm.signInForm,
+  signInForm.emailInput,
+  signInForm.passwordInput
+);
 
 // Sign Up functionality
 
