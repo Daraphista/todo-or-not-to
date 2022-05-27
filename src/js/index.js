@@ -4,7 +4,7 @@ import { handleSignIn } from "./authentication";
 
 const signInForm = document.querySelector(".sign-in");
 const emailInput = document.querySelector(".sign-in #email");
-const passwordInput = document.getElementById("password");
+const passwordInput = document.querySelector(".sign-in #password");
 
 handleSignIn(signInForm, emailInput, passwordInput);
 
