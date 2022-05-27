@@ -34,11 +34,11 @@ export { handleSignUp };
 
 // move sign out functionality here
 
-import { signOut } from "firebase/auth";
+import { signOut, getAuth } from "firebase/auth";
 
 const handleSignOut = (logOutButton) => {
   logOutButton.addEventListener("click", () => {
-    signOut(auth);
+    signOut(getAuth());
   });
 };
 

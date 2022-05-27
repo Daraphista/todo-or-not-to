@@ -32,13 +32,11 @@ handleSignUp(
 
 // Log out functionality
 
-import { signOut } from "firebase/auth";
+
 
 const logOutButton = document.querySelector(".logout");
 
-logOutButton.addEventListener("click", () => {
-  signOut(auth);
-});
+
 
 // Get user data when signed in
 
