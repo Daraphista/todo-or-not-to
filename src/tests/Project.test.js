@@ -1,5 +1,5 @@
-import { addDoc, setDoc } from "firebase/firestore";
-import { createProject, editProject } from "../js/Project";
+import { addDoc, setDoc, deleteDoc } from "firebase/firestore";
+import { createProject, deleteProject, editProject } from "../js/Project";
 
 jest.mock("firebase/firestore");
 
@@ -31,6 +31,13 @@ describe("Projects", () => {
       const updatedDocument = {};
       editProject(document, updatedDocument);
       expect(setDoc).toBeCalledWith(document, updatedDocument, { merge: true });
+    });
+  });
+
+  describe("deleteProject", () => {
+    test("calls deleteDoc()", () => {
+      deleteProject();
+      expect(deleteDoc).toBeCalled();
     });
   });
 });
