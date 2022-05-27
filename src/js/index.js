@@ -41,24 +41,21 @@ handleSignOut(logOutButton);
 // Get user data when signed in
 
 import { onAuthStateChanged } from "firebase/auth";
-import { collection, query, onSnapshot } from "firebase/firestore";
 import { database, auth } from "./firebase";
-
-const getContainers = (id) => {
-  const collectionQuery = query(
-    collection(database, `user-data/${id}/containers`)
-  );
-  onSnapshot(collectionQuery, (querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      console.log(doc.data());
-    });
-  });
-};
+import { getUserData } from "./user-data";
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log(user);
-    getContainers(user.uid);
+
+    const containersPath = `user-data/${user.uid}/containers`;
+    const logContainers = (querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.data());
+      });
+    };
+
+    getUserData(database, containersPath, logContainers);
   } else {
     console.log("user signed out");
   }
