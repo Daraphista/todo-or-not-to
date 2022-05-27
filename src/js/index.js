@@ -32,11 +32,11 @@ handleSignUp(
 
 // Log out functionality
 
-
+import { handleSignOut } from "./authentication";
 
 const logOutButton = document.querySelector(".logout");
 
-
+handleSignOut(logOutButton);
 
 // Get user data when signed in
 
