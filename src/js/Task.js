@@ -1,8 +1,14 @@
 // function to create task and store it in a firestore collection
 
-import { addDoc } from "firebase/firestore";
+import { addDoc, collection, getDoc } from "firebase/firestore";
 
-const createTask = (collection, title, description, priority, date) => {
+const createTask = (
+  collectionReference,
+  title,
+  description,
+  priority,
+  date
+) => {
   const newTask = {
     title,
     description,
@@ -10,7 +16,7 @@ const createTask = (collection, title, description, priority, date) => {
     date,
     isFinished: false,
   };
-  addDoc(collection, newTask);
+  addDoc(collectionReference, newTask);
 };
 
 export { createTask };
@@ -34,3 +40,24 @@ const deleteTask = (document) => {
 };
 
 export { deleteTask };
+
+// function that moves task to specific container
+
+import { database } from "./firebase";
+import { doc } from "firebase/firestore";
+
+// TODO fix moveTask
+
+const moveTask = async (docRef, containerPath) => {
+  const id = docRef.id;
+  const docSnap = await getDoc(docRef);
+  const newDocRef = doc(database, containerPath, id);
+
+  // copy task data and set it in containerPath
+  setDoc(newDocRef, docSnap.data());
+
+  // delete the original task
+  deleteDoc(docRef);
+};
+
+export { moveTask };
