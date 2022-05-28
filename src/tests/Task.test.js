@@ -27,5 +27,9 @@ describe("Tasks", () => {
       moveTask();
       expect(setDoc).toBeCalled();
     });
+    test("deletes original task document", () => {
+      moveTask();
+      expect(deleteDoc).toBeCalled();
+    });
   });
 });
