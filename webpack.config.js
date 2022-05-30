@@ -29,6 +29,7 @@ module.exports = {
       }
       {
         test: /\.css$/i,
+        include: path.resolve(__dirname, 'src'),
       }
     ]
   }
