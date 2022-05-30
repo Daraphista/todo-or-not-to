@@ -20,6 +20,9 @@ module.exports = {
       {
         test: /\.js$/i,
         include: path.resolve(__dirname, 'src'),
+        use: {
+          
+        }
       }
     ]
   }
