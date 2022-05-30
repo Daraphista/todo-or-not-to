@@ -33,6 +33,10 @@
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
-    "firebase": "^9.8.1"
+    "css-loader": "^6.7.1",
+    "firebase": "^9.8.1",
+    "postcss-loader": "^7.0.0",
+    "postcss-preset-env": "^7.6.0",
+    "style-loader": "^3.3.1"
   }
 }
