@@ -15,4 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   devtool: "inline-source-map",
+  module: {
+    
+  }
 };
