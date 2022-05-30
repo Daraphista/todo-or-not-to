@@ -6,7 +6,7 @@ module.exports = {
       directory: path.join(__dirname, "dist"),
     },
     compress: true,
-    port: 9000
+    port: 9000,
   },
   mode: "development",
   entry: "./src/js/index.js",
@@ -19,19 +19,19 @@ module.exports = {
     rules: [
       {
         test: /\.js$/i,
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, "src"),
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'],
-          }
-        }
-      }
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, 'src'),
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
-      }
-    ]
-  }
+        include: path.resolve(__dirname, "src"),
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+    ],
+  },
 };
