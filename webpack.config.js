@@ -19,6 +19,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/i,
+        include: path.resolve(__dirname, 'src'),
       }
     ]
   }
