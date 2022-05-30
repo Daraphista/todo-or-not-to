@@ -27,6 +27,9 @@ module.exports = {
           }
         }
       }
+      {
+        test: /\.css$/i,
+      }
     ]
   }
 };
