@@ -1,3 +1,5 @@
+import "../style/style.css";
+
 // Sign In functionality
 
 import { handleSignIn } from "./authentication";
