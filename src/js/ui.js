@@ -6,4 +6,8 @@ const Authentication = (() => {
   const animateForm = () => {
     
   }
+
+  const showSignIn = () => {
+
+  }
 })
