@@ -10,4 +10,8 @@ const Authentication = (() => {
   const showForm = () => {
     
   }
+
+  const changeForm = () => {
+    
+  }
 })
