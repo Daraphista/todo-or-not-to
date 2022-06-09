@@ -14,4 +14,8 @@ const Authentication = (() => {
   const changeForm = () => {
     
   }
+
+  const hideForm = () => {
+    
+  }
 })
