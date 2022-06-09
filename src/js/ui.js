@@ -10,4 +10,8 @@ const Authentication = (() => {
   const showSignIn = () => {
 
   }
+
+  const showSignUp = () => {
+    
+  }
 })
