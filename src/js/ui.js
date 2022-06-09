@@ -1,2 +1,5 @@
 const Authentication = (() => {
+  const animateBackground = () => {
+
+  }
 })
