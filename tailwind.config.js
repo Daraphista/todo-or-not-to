@@ -1,6 +1,5 @@
 module.exports = {
-  purge: ['./dist/*index.html'],
-  content: [],
+  content: ["./dist/*.html", "./src/style/style.css}"],
   theme: {
     extend: {
       keyframes: {
