@@ -43,3 +43,15 @@ const handleSignOut = (logOutButton) => {
 };
 
 export { handleSignOut };
+
+// Authentication module object
+
+const Authentication = (() => {
+  const showForm = () => {};
+
+  const hideForm = () => {};
+
+  const changeForm = () => {};
+
+  return { showForm, hideForm, changeForm };
+})();
