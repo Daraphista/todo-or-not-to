@@ -15,26 +15,26 @@ const handleSignIn = (signInForm, emailInput, passwordInput) => {
 
 export { handleSignIn };
 
-// move sign up functionality here
-
 import { createUser } from "./firebase";
-
-const handleSignUp = (signUpForm, emailInput, passwordInput) => {
-  signUpForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const email = emailInput.value;
-    const password = passwordInput.value;
-
-    createUser(email, password);
-  });
-};
 
 import { signOut, getAuth } from "firebase/auth";
 
 // Authentication module object
 
 const Authentication = (() => {
+  // move sign up functionality here
+  
+  const handleSignUp = (signUpForm, emailInput, passwordInput) => {
+    signUpForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      const email = emailInput.value;
+      const password = passwordInput.value;
+      
+      createUser(email, password);
+    });
+  };
+  
   // move sign out functionality here
   
   const handleSignOut = (logOutButton) => {
