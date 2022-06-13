@@ -13,8 +13,6 @@ const handleSignIn = (signInForm, emailInput, passwordInput) => {
   });
 };
 
-export { handleSignIn };
-
 import { createUser } from "./firebase";
 
 import { signOut, getAuth } from "firebase/auth";
