@@ -30,23 +30,21 @@ const handleSignUp = (signUpForm, emailInput, passwordInput) => {
   });
 };
 
-export { handleSignUp };
-
-// move sign out functionality here
-
 import { signOut, getAuth } from "firebase/auth";
-
-const handleSignOut = (logOutButton) => {
-  logOutButton.addEventListener("click", () => {
-    signOut(getAuth());
-  });
-};
 
 // Authentication module object
 
 const Authentication = (() => {
-  const showForm = () => {};
+  // move sign out functionality here
+  
+  const handleSignOut = (logOutButton) => {
+    logOutButton.addEventListener("click", () => {
+      signOut(getAuth());
+    });
+  };
 
+  const showForm = () => {};
+  
   const hideForm = () => {};
 
   const changeForm = () => {};
