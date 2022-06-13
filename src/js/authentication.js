@@ -42,8 +42,6 @@ const handleSignOut = (logOutButton) => {
   });
 };
 
-export { handleSignOut };
-
 // Authentication module object
 
 const Authentication = (() => {
