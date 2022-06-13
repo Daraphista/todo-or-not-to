@@ -42,4 +42,22 @@ const handleSignOut = (logOutButton) => {
   });
 };
 
+// Authentication module object
+
+const Authentication = (() => {
+  const showForm = () => {
+
+  }
+
+  const hideForm = () => {
+
+  }
+
+  const changeForm = () => {
+
+  }
+
+  return { showForm, hideForm, changeForm }
+})()
+
 export { handleSignOut };
