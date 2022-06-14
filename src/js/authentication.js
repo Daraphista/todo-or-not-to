@@ -44,7 +44,13 @@ const Authentication = (() => {
     authenticationElements.authenticationDiv.classList.add("flex");
   };
 
-  const hideForm = () => {};
+  const hideForm = (authenticationElements) => {
+    authenticationElements.authenticationDiv.style.opacity = "0";
+    setTimeout(() => {
+      authenticationElements.authenticationDiv.classList.add("hidden");
+      authenticationElements.authenticationDiv.classList.remove("flex");
+    }, 1000)
+  };
 
   const changeForm = () => {};
 
