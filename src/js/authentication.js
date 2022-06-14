@@ -56,3 +56,5 @@ const Authentication = (() => {
 
   return { showForm, hideForm, changeForm };
 })();
+
+export default Authentication;
