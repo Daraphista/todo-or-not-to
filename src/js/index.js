@@ -1,9 +1,21 @@
 import "../style/style.css";
+import { onAuthStateChanged } from "firebase/auth";
+import { database, auth } from "./firebase";
+
+// decide whether to show authentication form or not
+
+import Authentication from './authentication'
+
+onAuthStateChanged(auth, user => {
+  if (!user) { // if there is no user...
+    Authentication.showForm();
+  } else { // else if user is signed in...
+    Authentication.hideForm();
+  }
+})
 
 // Get user data when signed in
 
-import { onAuthStateChanged } from "firebase/auth";
-import { database, auth } from "./firebase";
 import { getUserData } from "./user-data";
 
 onAuthStateChanged(auth, (user) => {
