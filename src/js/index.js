@@ -6,6 +6,10 @@ import { database, auth } from "./firebase";
 
 import Authentication from './authentication'
 
+const authenticationElements = {
+  authenticationDiv: document.querySelector("div.authentication"),
+}
+
 onAuthStateChanged(auth, user => {
   if (!user) { // if there is no user...
     Authentication.showForm();
