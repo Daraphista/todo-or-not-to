@@ -39,7 +39,10 @@ const Authentication = (() => {
     });
   };
 
-  const showForm = () => {};
+  const showForm = (authenticationElements) => {
+    authenticationElements.authenticationDiv.classList.remove("hidden");
+    authenticationElements.authenticationDiv.classList.add("flex");
+  };
 
   const hideForm = () => {};
 
