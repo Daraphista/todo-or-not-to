@@ -14,7 +14,7 @@ onAuthStateChanged(auth, user => {
   if (!user) { // if there is no user...
     Authentication.showForm(authenticationElements);
   } else { // else if user is signed in...
-    Authentication.hideForm();
+    Authentication.hideForm(authenticationElements);
   }
 })
 
