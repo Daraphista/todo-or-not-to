@@ -54,7 +54,7 @@ const Authentication = (() => {
     }, 1000);
   };
 
-  const changeForm = () => {};
+  const changeForm = (pickerElements, signInElements, signUpElements) => {};
 
   const showAuthenticationPopup = (
     authenticationElement,
