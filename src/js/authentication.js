@@ -44,19 +44,23 @@ const Authentication = (() => {
 
     form.classList.remove("hidden");
     form.classList.add("flex");
-  }
-  
+  };
+
   const hideForm = (authenticationElements) => {
     authenticationElements.authenticationDiv.style.opacity = "0";
     setTimeout(() => {
       authenticationElements.authenticationDiv.classList.add("hidden");
       authenticationElements.authenticationDiv.classList.remove("flex");
-    }, 1000)
+    }, 1000);
   };
 
   const changeForm = () => {};
 
-  const showAuthenticationPopup = (authenticationElement, signInElements, signUpElements) => {
+  const showAuthenticationPopup = (
+    authenticationElement,
+    signInElements,
+    signUpElements
+  ) => {
     authenticationElement.classList.remove("hidden");
     authenticationElement.classList.add("flex");
 
