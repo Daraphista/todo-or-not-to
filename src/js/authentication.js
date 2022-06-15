@@ -44,6 +44,12 @@ const Authentication = (() => {
 
     authenticationDiv.classList.remove("hidden");
     authenticationDiv.classList.add("flex");
+
+    const signInForm = authenticationElements.signInForm;
+    const emailInput = authenticationElements.signInEmailInput;
+    const passwordInput = authenticationElements.signInPasswordInput;
+
+    handleSignIn(signInForm, emailInput, passwordInput);
   };
 
   const hideForm = (authenticationElements) => {
