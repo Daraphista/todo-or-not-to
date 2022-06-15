@@ -39,19 +39,10 @@ const Authentication = (() => {
     });
   };
 
-  const showForm = (authenticationElements) => {
-    const authenticationDiv = authenticationElements.authenticationDiv;
+  const showForm = (form) => {
 
-    authenticationDiv.classList.remove("hidden");
-    authenticationDiv.classList.add("flex");
-
-    const signInForm = authenticationElements.signInForm;
-    const emailInput = authenticationElements.signInEmailInput;
-    const passwordInput = authenticationElements.signInPasswordInput;
-
-    handleSignIn(signInForm, emailInput, passwordInput);
-  };
-
+  }
+  
   const hideForm = (authenticationElements) => {
     authenticationElements.authenticationDiv.style.opacity = "0";
     setTimeout(() => {
@@ -60,9 +51,14 @@ const Authentication = (() => {
     }, 1000)
   };
 
+  const showAuthenticationPopup = (authenticationElement) => {
+    authenticationElement.classList.remove("hidden");
+    authenticationElement.classList.add("flex");
+  };
+
   const changeForm = () => {};
 
-  return { showForm, hideForm, changeForm };
+  return { showForm, showAuthenticationPopup, hideForm, changeForm };
 })();
 
 export default Authentication;
