@@ -11,7 +11,7 @@ const authenticationDiv = document.querySelector(".authentication");
 onAuthStateChanged(auth, (user) => {
   if (!user) {
     // if there is no user...
-    Authentication.showAuthenticationPopup(authenticationElements);
+    Authentication.showAuthenticationPopup(authenticationDiv);
   } else {
     // else if user is signed in...
     Authentication.hideForm(authenticationElements);
