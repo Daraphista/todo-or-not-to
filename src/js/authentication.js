@@ -54,14 +54,14 @@ const Authentication = (() => {
     }, 1000)
   };
 
+  const changeForm = () => {};
+
   const showAuthenticationPopup = (authenticationElement, signInElements, signUpElements) => {
     authenticationElement.classList.remove("hidden");
     authenticationElement.classList.add("flex");
 
     showForm(signInElements);
   };
-
-  const changeForm = () => {};
 
   return { showForm, showAuthenticationPopup, hideForm, changeForm };
 })();
