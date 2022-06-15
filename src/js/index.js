@@ -6,16 +6,6 @@ import { database, auth } from "./firebase";
 
 import Authentication from "./authentication";
 
-const authenticationElements = {
-  authenticationDiv: document.querySelector("div.authentication"),
-  signInForm: document.querySelector("form.sign-in"),
-  signInEmailInput: document.querySelector("form.sign-in #email"),
-  signInPasswordInput: document.querySelector("form.sign-in #password"),
-  signUpForm: document.querySelector("form .sign-up"),
-  signUpEmailInput: document.querySelector("form.sign-up #email"),
-  signUpPasswordInput: document.querySelector("form.sign-up #password"),
-};
-
 onAuthStateChanged(auth, (user) => {
   if (!user) {
     // if there is no user...
