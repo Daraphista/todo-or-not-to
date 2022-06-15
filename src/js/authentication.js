@@ -63,6 +63,8 @@ const Authentication = (() => {
     showForm(signInElements);
 
     const signInForm = signInElements.form;
+    const signInEmailInput = signInElements.emailInput;
+    const signInPasswordInput = signInElements.passwordInput;
   };
 
   return { showForm, showAuthenticationPopup, hideForm, changeForm };
