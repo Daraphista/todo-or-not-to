@@ -107,7 +107,7 @@ const Authentication = (() => {
     handleFormPicker(pickerElements, signInElements, signUpElements);
   };
 
-  return { showForm, showAuthenticationPopup, hideForm, changeForm };
+  return { showAuthenticationPopup, hideForm };
 })();
 
 export default Authentication;
