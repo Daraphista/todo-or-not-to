@@ -9,6 +9,8 @@ import Authentication from "./authentication";
 const authenticationElements = {
   authenticationDiv: document.querySelector("div.authentication"),
   signInForm: document.querySelector("form.sign-in"),
+  signInEmailInput: document.querySelector("form.sign-in #email"),
+  signInPasswordInput: document.querySelector("form.sign-in #password"),
 };
 
 onAuthStateChanged(auth, (user) => {
