@@ -91,7 +91,8 @@ const Authentication = (() => {
   const showAuthenticationPopup = (
     authenticationElement,
     signInElements,
-    signUpElements
+    signUpElements,
+    pickerElements
   ) => {
     authenticationElement.classList.remove("hidden");
     authenticationElement.classList.add("flex");
