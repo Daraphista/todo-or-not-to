@@ -7,6 +7,11 @@ import { database, auth } from "./firebase";
 import Authentication from "./authentication";
 
 const authenticationDiv = document.querySelector(".authentication");
+const signInElements = {
+  form: document.querySelector("form.sign-in"),
+  emailInput: document.querySelector("form.sign-in #email"),
+  passwordInput: document.querySelector("form.sign-in #password"),
+};
 
 onAuthStateChanged(auth, (user) => {
   if (!user) {
