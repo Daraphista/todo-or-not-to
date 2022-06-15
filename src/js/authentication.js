@@ -40,7 +40,10 @@ const Authentication = (() => {
   };
 
   const showForm = (formElements) => {
+    const form = formElements.form;
 
+    form.classList.remove("hidden");
+    form.classList.add("flex");
   }
   
   const hideForm = (authenticationElements) => {
