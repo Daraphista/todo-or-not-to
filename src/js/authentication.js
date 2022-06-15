@@ -54,9 +54,38 @@ const Authentication = (() => {
     }, 1000);
   };
 
-  const changeForm = (pickerElements, signInElements, signUpElements) => {
-    const signInPicker = pickerElements.signInPicker;
-    const signUpPicker = pickerElements.signUpPicker;
+  const handleFormPicker = (pickerElements, signInElements, signUpElements) => {
+    const signInPickers = pickerElements.signInPickers;
+    const signUpPickers = pickerElements.signUpPickers;
+
+    const signInForm = signInElements.form;
+    const signUpForm = signUpElements.form;
+
+    signInPickers.forEach((signInPicker) => {
+      signInPicker.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        signInForm.style.animationDelay = "0s";
+        signInForm.classList.remove("hidden");
+        signInForm.classList.add("flex");
+
+        signUpForm.classList.remove("flex");
+        signUpForm.classList.add("hidden");
+      });
+    });
+
+    signUpPickers.forEach((signUpPicker) => {
+      signUpPicker.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        signUpForm.style.animationDelay = "0s";
+        signUpForm.classList.remove("hidden");
+        signUpForm.classList.add("flex");
+
+        signInForm.classList.remove("flex");
+        signInForm.classList.add("hidden");
+      });
+    });
   };
 
   const showAuthenticationPopup = (
