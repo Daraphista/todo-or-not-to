@@ -11,6 +11,7 @@ const authenticationElements = {
   signInForm: document.querySelector("form.sign-in"),
   signInEmailInput: document.querySelector("form.sign-in #email"),
   signInPasswordInput: document.querySelector("form.sign-in #password"),
+  signUpForm: document.querySelector("form .sign-up"),
 };
 
 onAuthStateChanged(auth, (user) => {
