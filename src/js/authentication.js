@@ -61,6 +61,8 @@ const Authentication = (() => {
     authenticationElement.classList.add("flex");
 
     showForm(signInElements);
+
+    const signInForm = signInElements.form;
   };
 
   return { showForm, showAuthenticationPopup, hideForm, changeForm };
