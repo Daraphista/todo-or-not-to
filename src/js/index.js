@@ -4,19 +4,21 @@ import { database, auth } from "./firebase";
 
 // decide whether to show authentication form or not
 
-import Authentication from './authentication'
+import Authentication from "./authentication";
 
 const authenticationElements = {
   authenticationDiv: document.querySelector("div.authentication"),
-}
+};
 
-onAuthStateChanged(auth, user => {
-  if (!user) { // if there is no user...
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    // if there is no user...
     Authentication.showForm(authenticationElements);
-  } else { // else if user is signed in...
+  } else {
+    // else if user is signed in...
     Authentication.hideForm(authenticationElements);
   }
-})
+});
 
 // Get user data when signed in
 
