@@ -16,7 +16,7 @@ const signInElements = {
 onAuthStateChanged(auth, (user) => {
   if (!user) {
     // if there is no user...
-    Authentication.showAuthenticationPopup(authenticationDiv);
+    Authentication.showAuthenticationPopup(authenticationDiv, signInElements);
   } else {
     // else if user is signed in...
     Authentication.hideForm(authenticationElements);
