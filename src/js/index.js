@@ -33,7 +33,7 @@ onAuthStateChanged(auth, (user) => {
     );
   } else {
     // else if user is signed in...
-    Authentication.hideForm(authenticationElements);
+    Authentication.hideAuthenticationPopup(authenticationDiv);
   }
 });
 
