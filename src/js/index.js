@@ -17,6 +17,10 @@ const signUpElements = {
   emailInput: document.querySelector("form.sign-up #email"),
   passwordInput: document.querySelector("form.sign-up #password"),
 };
+const formPicker = {
+  signInPickers: Array.from(document.querySelectorAll(".picker .sign-in")),
+  signUpPickers: Array.from(document.querySelectorAll(".picker .sign-up")),
+};
 
 onAuthStateChanged(auth, (user) => {
   if (!user) {
