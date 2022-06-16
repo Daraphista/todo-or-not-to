@@ -104,6 +104,9 @@ const Authentication = (() => {
     const signInPasswordInput = signInElements.passwordInput;
 
     handleSignIn(signInForm, signInEmailInput, signInPasswordInput);
+
+    const signUpForm = signUpElements.form;
+
     handleFormPicker(pickerElements, signInElements, signUpElements);
   };
 
