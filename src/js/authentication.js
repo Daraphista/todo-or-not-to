@@ -46,14 +46,6 @@ const Authentication = (() => {
     form.classList.add("flex");
   };
 
-  const hideForm = (authenticationElements) => {
-    authenticationElements.authenticationDiv.style.opacity = "0";
-    setTimeout(() => {
-      authenticationElements.authenticationDiv.classList.add("hidden");
-      authenticationElements.authenticationDiv.classList.remove("flex");
-    }, 1000);
-  };
-
   const handleFormPicker = (pickerElements, signInElements, signUpElements) => {
     const signInPickers = pickerElements.signInPickers;
     const signUpPickers = pickerElements.signUpPickers;
@@ -114,7 +106,15 @@ const Authentication = (() => {
     handleFormPicker(pickerElements, signInElements, signUpElements);
   };
 
-  return { showAuthenticationPopup, hideForm };
+  const hideAuthenticationPopup = (authenticationElement) => {
+    authenticationElement.style.opacity = "0";
+    setTimeout(() => {
+      authenticationElement.classList.add("hidden");
+      authenticationElement.classList.remove("flex");
+    }, 1000);
+  };
+
+  return { showAuthenticationPopup, hideAuthenticationPopup };
 })();
 
 export default Authentication;
