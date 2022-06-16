@@ -7,17 +7,17 @@ import { database, auth } from "./firebase";
 import Authentication from "./authentication";
 
 const authenticationDiv = document.querySelector(".authentication");
-const signInElements = {
+const SignInElements = {
   form: document.querySelector("form.sign-in"),
   emailInput: document.querySelector("form.sign-in #email"),
   passwordInput: document.querySelector("form.sign-in #password"),
 };
-const signUpElements = {
+const SignUpElements = {
   form: document.querySelector("form.sign-up"),
   emailInput: document.querySelector("form.sign-up #email"),
   passwordInput: document.querySelector("form.sign-up #password"),
 };
-const formPicker = {
+const FormPicker = {
   signInPickers: Array.from(document.querySelectorAll(".picker .sign-in")),
   signUpPickers: Array.from(document.querySelectorAll(".picker .sign-up")),
 };
@@ -27,9 +27,9 @@ onAuthStateChanged(auth, (user) => {
     // if there is no user...
     Authentication.showAuthenticationPopup(
       authenticationDiv,
-      signInElements,
-      signUpElements,
-      formPicker
+      SignInElements,
+      SignUpElements,
+      FormPicker
     );
   } else {
     // else if user is signed in...
