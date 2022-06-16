@@ -13,6 +13,7 @@
 <body class="flex min-h-screen">
   <div
     class="authentication hidden fixed w-full h-full bg-[#2C2B2B] text-white justify-center items-center transition-opacity duration-200">
+
     <div class="background grid grid-cols-[448px_448px] absolute z-[-1]">
       <img src="./assets/images/blob-3.svg" class="scale-0 animate-[grow_250ms] animation-fill-forwards" alt="blob 3">
       <div class="top-left-blobs relative">
@@ -29,6 +30,7 @@
       <img src="./assets/images/blob-6.svg" class="scale-0 animate-[grow_250ms_100ms] animation-fill-forwards"
         alt="blob 6">
     </div>
+
     <form
       class="sign-in shadow-lg scale-0 backdrop-blur-lg bg-white/[0.05] hidden flex-col gap-8 text-center min-w-[25rem] rounded-xl px-8 py-9 animate-[grow_250ms_600ms] animation-fill-forwards">
       <h1 class="text-4xl">Sign In</h1>
@@ -47,6 +49,7 @@
       <button class="sign-in flex-1 bg-[#393939]/[0.8] rounded-md py-2">Sign In</button>
       <p class="picker text-neutral-300">Not a member yet? <a href="" class="sign-up text-white">Sign up now</a></p>
     </form>
+
     <form
       class="sign-up shadow-lg scale-0 backdrop-blur-lg bg-white/[0.05] hidden flex-col gap-8 text-center min-w-[25rem] rounded-xl px-8 py-9 animate-[grow_250ms_600ms] animation-fill-forwards">
       <h1 class="text-4xl">Sign In</h1>
@@ -70,6 +73,8 @@
       <p class="picker text-neutral-300">Already have an account? <a href="" class="sign-in text-white">Sign in now</a></p>
     </form>
   </div>
+
+
   <nav class="bg-[#393939]">
     <div class="px-14 py-4 border-b border-[#9E9C9C]">
       <img src="./assets/images/Logo.svg" alt="todo logo" />
@@ -89,6 +94,8 @@
       </ul>
     </div>
   </nav>
+
+
   <main class="flex-1 py-32, flex bg-[#2C2B2B] justify-center">
     <div class="content max-w-3xl flex-1 flex flex-col">
       <h1 class="container-title text-4xl"></h1>
@@ -96,7 +103,8 @@
       <form action="" class="add-task flex">
         <label class="flex flex-1 gap-1 bg-[#393939] py-2 px-3 rounded-2xl">
           <img src="./assets//images/plus-icon.svg" alt="plus" />
-          <input type="text" placeholder="Add Task" class="flex-1 bg-transparent placeholder-white px-1" /></label>
+          <input type="text" placeholder="Add Task" class="flex-1 bg-transparent placeholder-white px-1" />
+        </label>
     </div>
     </form>
   </main>
