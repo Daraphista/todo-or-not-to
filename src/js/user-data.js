@@ -34,4 +34,8 @@ const setNewUserData = (user) => {
 
 export { setNewUserData };
 
-const UserData = (() => {})();
+const UserData = (() => {
+  const displayUserData = () => {};
+
+  return { displayUserData };
+})();
