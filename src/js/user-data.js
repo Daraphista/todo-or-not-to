@@ -36,6 +36,7 @@ export { setNewUserData };
 
 const UserData = (() => {
   const displayUserData = () => {};
+  const clearDisplayedUserData = () => {};
 
-  return { displayUserData };
+  return { displayUserData, clearDisplayedUserData };
 })();
