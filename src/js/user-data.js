@@ -4,6 +4,7 @@ import { database } from "./firebase";
 import {
   collection,
   doc,
+  getDocs,
   setDoc,
   onSnapshot,
   query,
@@ -59,6 +60,7 @@ const UserData = (() => {
     const inboxTasksPath = `user-data/${uid}/containers/inbox/tasks`;
 
     const tasksQuery = query(collection(database, inboxTasksPath));
+    const tasksSnapshot = await getDocs(tasksQuery);
   };
 
   const displayUserData = (database, uid) => {
