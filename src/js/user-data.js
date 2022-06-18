@@ -33,11 +33,6 @@ export { setNewUserData };
 
 const UserData = (() => {
   const displayContainerTitle = (containerTitlePath, parentDiv) => {
-    // create inbox container element
-    const inboxContainerElement = document.createElement("div");
-    inboxContainerElement.classList.add("container-inbox");
-    parentDiv.appendChild(inboxContainerElement);
-
     // create inbox container heading
     const inboxHeaderElement = document.createElement("h1");
     inboxContainerElement.appendChild(inboxHeaderElement);
@@ -70,6 +65,11 @@ const UserData = (() => {
   const displayInboxData = async (database, uid, parentDiv) => {
     // get inbox container path
     const inboxPath = `user-data/${uid}/containers/inbox`;
+    
+    // create inbox container element
+    const inboxContainerElement = document.createElement("div");
+    inboxContainerElement.classList.add("container-inbox");
+    parentDiv.appendChild(inboxContainerElement);
 
     displayContainerTitle(inboxPath, parentDiv);
   };
