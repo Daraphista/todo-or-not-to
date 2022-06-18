@@ -44,7 +44,7 @@ const UserData = (() => {
     });
   };
 
-  const displayContainerTasks = (containerTasksPath, parentDiv) => {  
+  const displayContainerTasks = async (containerTasksPath, parentDiv) => {  
     // create task container div
     const taskContainerElement = document.createElement("div");
     taskContainerElement.classList.add("task-container");
