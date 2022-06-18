@@ -28,7 +28,7 @@ const UserData = (() => {
     // create inbox container element
     const inboxContainerElement = document.createElement("div");
     inboxContainerElement.classList.add("container-inbox");
-    dataDiv.appendChild(inboxContainerElement);
+    parentDiv.appendChild(inboxContainerElement);
 
     // create inbox container heading
     const inboxHeaderElement = document.createElement("h1");
