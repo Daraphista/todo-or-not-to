@@ -49,10 +49,7 @@ const UserData = (() => {
     const taskContainerElement = document.createElement("div");
     taskContainerElement.classList.add("task-container");
     inboxContainerElement.appendChild(taskContainerElement);
-
-    // get inbox container tasks path
-    const inboxTasksPath = `user-data/${uid}/containers/inbox/tasks`;
-
+    
     const tasksQuery = query(collection(database, inboxTasksPath));
     const tasksSnapshot = await getDocs(tasksQuery);
     tasksSnapshot.forEach((doc) => {
@@ -65,6 +62,9 @@ const UserData = (() => {
   const displayInboxData = (database, uid, parentDiv) => {
     // get inbox container path
     const inboxPath = `user-data/${uid}/containers/inbox`;
+    
+    // get inbox container tasks path
+    const inboxTasksPath = `user-data/${uid}/containers/inbox/tasks`;    
     
     // create inbox container element
     const inboxContainerElement = document.createElement("div");
