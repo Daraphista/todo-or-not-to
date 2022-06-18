@@ -64,6 +64,7 @@ const UserData = (() => {
     // create container element
     const containerElement = document.createElement("div");
     containerElement.classList.add(className);
+    parentDiv.appendChild(containerElement);
 
     // get container document path
     const containerPath = `user-data/${uid}/containers/${containerName}`;
