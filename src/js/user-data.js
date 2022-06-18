@@ -31,7 +31,7 @@ const setNewUserData = (user) => {
 export { setNewUserData };
 
 const UserData = (() => {
-  const displayInboxData = (database, uid, parentDiv) => {
+  const displayInboxData = async (database, uid, parentDiv) => {
     // create inbox container element
     const inboxContainerElement = document.createElement("div");
     inboxContainerElement.classList.add("container-inbox");
