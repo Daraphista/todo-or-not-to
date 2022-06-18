@@ -41,7 +41,10 @@ const UserData = (() => {
     const inboxPath = `user-data/${uid}/containers/inbox`
 
     // read and listen to the inbox container document
-    const unsubToInbox = onSnapshot(doc(database, inboxPath), doc => {})
+    const unsubToInbox = onSnapshot(doc(database, inboxPath), doc => {
+      // set inboxHeaderElement's textContent to the inbox container document's title
+      inboxHeaderElement.textContent = doc.data().title
+    })
   };
   const clearDisplayedUserData = () => {};
 
