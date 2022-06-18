@@ -73,6 +73,8 @@ const UserData = (() => {
 
     // get container tasks path
     const containerTasksPath = `user-data/${uid}/containers/${containerName}/tasks`;
+
+    displayContainerTasks(containerTasksPath, parentDiv);
   }
   
   const displayInboxData = (uid, parentDiv) => {
