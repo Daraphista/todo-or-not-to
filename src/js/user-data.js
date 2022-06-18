@@ -32,9 +32,7 @@ const setNewUserData = (user) => {
 export { setNewUserData };
 
 const UserData = (() => {
-  const displayContainerTitle = (containerTitlePath) => {};
-
-  const displayInboxData = async (database, uid, parentDiv) => {
+  const displayContainerTitle = (containerTitlePath, parentDiv) => {
     // create inbox container element
     const inboxContainerElement = document.createElement("div");
     inboxContainerElement.classList.add("container-inbox");
@@ -43,16 +41,18 @@ const UserData = (() => {
     // create inbox container heading
     const inboxHeaderElement = document.createElement("h1");
     inboxContainerElement.appendChild(inboxHeaderElement);
-
-    // get inbox container path
-    const inboxPath = `user-data/${uid}/containers/inbox`;
-
+    
     // read and listen to the inbox container document
     const unsubToInbox = onSnapshot(doc(database, inboxPath), (doc) => {
       // set inboxHeaderElement's textContent to the inbox container document's title
       inboxHeaderElement.textContent = doc.data().title;
     });
-
+  };
+  
+  const displayInboxData = async (database, uid, parentDiv) => {
+    // get inbox container path
+    const inboxPath = `user-data/${uid}/containers/inbox`;
+    
     // create task container div
     const taskContainerElement = document.createElement("div");
     taskContainerElement.classList.add("task-container");
