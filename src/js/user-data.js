@@ -38,13 +38,13 @@ const UserData = (() => {
     inboxContainerElement.appendChild(inboxHeaderElement);
 
     // get inbox container path
-    const inboxPath = `user-data/${uid}/containers/inbox`
+    const inboxPath = `user-data/${uid}/containers/inbox`;
 
     // read and listen to the inbox container document
-    const unsubToInbox = onSnapshot(doc(database, inboxPath), doc => {
+    const unsubToInbox = onSnapshot(doc(database, inboxPath), (doc) => {
       // set inboxHeaderElement's textContent to the inbox container document's title
-      inboxHeaderElement.textContent = doc.data().title
-    })
+      inboxHeaderElement.textContent = doc.data().title;
+    });
   };
   const clearDisplayedUserData = () => {};
 
