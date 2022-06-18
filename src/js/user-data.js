@@ -25,13 +25,6 @@ export { setNewUserData };
 
 const UserData = (() => {
   const displayInboxData = (database, uid) => {
-    
-  }
-
-  const displayUserData = (database, uid) => {
-    // get data div in main
-    const dataDiv = document.querySelector("main .content .data");
-
     // create inbox container element
     const inboxContainerElement = document.createElement("div");
     inboxContainerElement.classList.add("container-inbox");
@@ -49,6 +42,11 @@ const UserData = (() => {
       // set inboxHeaderElement's textContent to the inbox container document's title
       inboxHeaderElement.textContent = doc.data().title;
     });
+  }
+
+  const displayUserData = (database, uid) => {
+    // get data div in main
+    const dataDiv = document.querySelector("main .content .data");
   };
   const clearDisplayedUserData = () => {};
 
