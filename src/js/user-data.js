@@ -50,7 +50,7 @@ const UserData = (() => {
     taskContainerElement.classList.add("task-container");
     parentDiv.appendChild(taskContainerElement);
     
-    const tasksQuery = query(collection(database, inboxTasksPath));
+    const tasksQuery = query(collection(database, containerTasksPath));
     const tasksSnapshot = await getDocs(tasksQuery);
     tasksSnapshot.forEach((doc) => {
       const taskElement = document.createElement("div");
