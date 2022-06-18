@@ -58,6 +58,8 @@ const UserData = (() => {
       taskElement.textContent = doc.data().title;
     });
   }
+
+  const displayContainerData = (uid, parentDiv, className) => {}
   
   const displayInboxData = (uid, parentDiv) => {
     // get inbox container path
