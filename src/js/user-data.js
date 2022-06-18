@@ -27,6 +27,11 @@ const UserData = (() => {
   const displayUserData = (database, uid) => {
     // get data div in main
     const dataDiv = document.querySelector("main .content .data");
+
+    // create inbox container element
+    const inboxContainerElement = document.createElement("div");
+    inboxContainerElement.classList.add("container-inbox");
+    dataDiv.appendChild(inboxContainerElement);
   };
   const clearDisplayedUserData = () => {};
 
