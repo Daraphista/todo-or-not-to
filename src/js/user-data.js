@@ -36,6 +36,12 @@ const UserData = (() => {
     // create inbox container heading
     const inboxHeaderElement = document.createElement("h1");
     inboxContainerElement.appendChild(inboxHeaderElement);
+
+    // get inbox container path
+    const inboxPath = `user-data/${uid}/containers/inbox`
+
+    // read and listen to the inbox container document
+    const unsubToInbox = onSnapshot(doc(database, inboxPath), doc => {})
   };
   const clearDisplayedUserData = () => {};
 
