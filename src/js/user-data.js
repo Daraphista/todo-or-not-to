@@ -72,6 +72,7 @@ const UserData = (() => {
     parentDiv.appendChild(inboxContainerElement);
 
     displayContainerTitle(inboxPath, parentDiv);
+    displayContainerTasks(inboxTasksPath, inboxContainerElement);
   };
 
   const displayUserData = (database, uid) => {
