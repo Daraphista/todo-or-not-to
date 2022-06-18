@@ -32,6 +32,10 @@ const UserData = (() => {
     const inboxContainerElement = document.createElement("div");
     inboxContainerElement.classList.add("container-inbox");
     dataDiv.appendChild(inboxContainerElement);
+
+    // create inbox container heading
+    const inboxHeaderElement = document.createElement("h1");
+    inboxContainerElement.appendChild(inboxHeaderElement);
   };
   const clearDisplayedUserData = () => {};
 
