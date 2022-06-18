@@ -47,6 +47,7 @@ const UserData = (() => {
   const displayUserData = (database, uid) => {
     // get data div in main
     const dataDiv = document.querySelector("main .content .data");
+    displayInboxData(database, uid, dataDiv);
   };
   const clearDisplayedUserData = () => {};
 
