@@ -49,7 +49,7 @@ const UserData = (() => {
     });
   };
 
-  const displayContainerTasks = () => {  
+  const displayContainerTasks = (containerTasksPath, parentDiv) => {  
     // create task container div
     const taskContainerElement = document.createElement("div");
     taskContainerElement.classList.add("task-container");
