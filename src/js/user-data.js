@@ -48,6 +48,8 @@ const UserData = (() => {
       inboxHeaderElement.textContent = doc.data().title;
     });
   };
+
+  const displayContainerTasks = () => {}
   
   const displayInboxData = async (database, uid, parentDiv) => {
     // get inbox container path
