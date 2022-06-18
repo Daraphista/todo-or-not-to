@@ -47,6 +47,9 @@ const UserData = (() => {
     const taskContainerElement = document.createElement("div");
     taskContainerElement.classList.add("task-container");
     inboxContainerElement.appendChild(taskContainerElement);
+
+    // get inbox container tasks path
+    const inboxTasksPath = `user-data/${uid}/containers/inbox/tasks`;
   };
 
   const displayUserData = (database, uid) => {
