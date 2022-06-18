@@ -37,27 +37,6 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-// Get user data when signed in
-
-import { getUserData } from "./user-data";
-
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    console.log(user);
-
-    const containersPath = `user-data/${user.uid}/containers`;
-    const logContainers = (querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(doc.data());
-      });
-    };
-
-    getUserData(database, containersPath, logContainers);
-  } else {
-    console.log("user signed out");
-  }
-});
-
 // Set new user data when signed in
 
 import { doc, getDoc } from "firebase/firestore";
