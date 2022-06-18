@@ -62,7 +62,7 @@ const UserData = (() => {
     });
   }
   
-  const displayInboxData = async (database, uid, parentDiv) => {
+  const displayInboxData = (database, uid, parentDiv) => {
     // get inbox container path
     const inboxPath = `user-data/${uid}/containers/inbox`;
     
