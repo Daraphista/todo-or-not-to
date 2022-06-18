@@ -50,3 +50,5 @@ const UserData = (() => {
 
   return { displayUserData, clearDisplayedUserData };
 })();
+
+export default UserData;
