@@ -10,6 +10,7 @@ import {
   query,
 } from "firebase/firestore";
 import { async } from "@firebase/util";
+import { container } from "webpack";
 
 const setNewUserData = (user) => {
   // set document using user id as it's id
@@ -62,6 +63,7 @@ const UserData = (() => {
   const displayContainerData = (uid, containerName, parentDiv, className) => {
     // create container element
     const containerElement = document.createElement("div");
+    containerElement.classList.add(className);
 
     // get container document path
     const containerPath = `user-data/${uid}/containers/${containerName}`;
