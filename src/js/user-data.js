@@ -71,7 +71,7 @@ const UserData = (() => {
     inboxContainerElement.classList.add("container-inbox");
     parentDiv.appendChild(inboxContainerElement);
 
-    displayContainerTitle(inboxPath, parentDiv);
+    displayContainerTitle(inboxPath, inboxContainerElement);
     displayContainerTasks(inboxTasksPath, inboxContainerElement);
   };
 
