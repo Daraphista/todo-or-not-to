@@ -59,7 +59,7 @@ const UserData = (() => {
     });
   }
   
-  const displayInboxData = (database, uid, parentDiv) => {
+  const displayInboxData = (uid, parentDiv) => {
     // get inbox container path
     const inboxPath = `user-data/${uid}/containers/inbox`;
     
@@ -78,7 +78,7 @@ const UserData = (() => {
   const displayUserData = (database, uid) => {
     // get data div in main
     const dataDiv = document.querySelector("main .content .data");
-    displayInboxData(database, uid, dataDiv);
+    displayInboxData(uid, dataDiv);
   };
   const clearDisplayedUserData = () => {};
 
