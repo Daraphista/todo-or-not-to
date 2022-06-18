@@ -24,6 +24,10 @@ const setNewUserData = (user) => {
 export { setNewUserData };
 
 const UserData = (() => {
+  const displayInboxData = (database, uid) => {
+    
+  }
+
   const displayUserData = (database, uid) => {
     // get data div in main
     const dataDiv = document.querySelector("main .content .data");
