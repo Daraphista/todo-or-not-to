@@ -42,6 +42,11 @@ const UserData = (() => {
       // set inboxHeaderElement's textContent to the inbox container document's title
       inboxHeaderElement.textContent = doc.data().title;
     });
+
+    // create task container div
+    const taskContainerElement = document.createElement("div");
+    taskContainerElement.classList.add("task-container");
+    inboxContainerElement.appendChild(taskContainerElement);
   };
 
   const displayUserData = (database, uid) => {
