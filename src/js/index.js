@@ -37,6 +37,16 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+// display user data when signed in
+
+import UserData from "./user-data";
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    UserData.displayUserData(database, user.uid);
+  }
+});
+
 // Set new user data when signed in
 
 import { doc, getDoc } from "firebase/firestore";
