@@ -24,7 +24,10 @@ const setNewUserData = (user) => {
 export { setNewUserData };
 
 const UserData = (() => {
-  const displayUserData = () => {};
+  const displayUserData = (database, uid) => {
+    // get data div in main
+    const dataDiv = document.querySelector("main .content .data");
+  };
   const clearDisplayedUserData = () => {};
 
   return { displayUserData, clearDisplayedUserData };
