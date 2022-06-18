@@ -1,7 +1,14 @@
 // set user data if user is new or doesn't have data
 
 import { database } from "./firebase";
-import { doc, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  setDoc,
+  onSnapshot,
+  query,
+} from "firebase/firestore";
+import { async } from "@firebase/util";
 
 const setNewUserData = (user) => {
   // set document using user id as it's id
@@ -50,6 +57,8 @@ const UserData = (() => {
 
     // get inbox container tasks path
     const inboxTasksPath = `user-data/${uid}/containers/inbox/tasks`;
+
+    const tasksQuery = query(collection(database, inboxTasksPath));
   };
 
   const displayUserData = (database, uid) => {
