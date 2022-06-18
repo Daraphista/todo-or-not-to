@@ -68,6 +68,8 @@ const UserData = (() => {
 
     // get container document path
     const containerPath = `user-data/${uid}/containers/${containerName}`;
+
+    displayContainerTitle(containerPath, containerElement);
   }
   
   const displayInboxData = (uid, parentDiv) => {
