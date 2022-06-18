@@ -42,7 +42,7 @@ const UserData = (() => {
       // set inboxHeaderElement's textContent to the inbox container document's title
       inboxHeaderElement.textContent = doc.data().title;
     });
-  }
+  };
 
   const displayUserData = (database, uid) => {
     // get data div in main
