@@ -49,14 +49,7 @@ const UserData = (() => {
     });
   };
 
-  const displayContainerTasks = () => {}
-  
-  const displayInboxData = async (database, uid, parentDiv) => {
-    // get inbox container path
-    const inboxPath = `user-data/${uid}/containers/inbox`;
-
-    displayContainerTitle(inboxPath, parentDiv);
-    
+  const displayContainerTasks = () => {  
     // create task container div
     const taskContainerElement = document.createElement("div");
     taskContainerElement.classList.add("task-container");
@@ -72,6 +65,13 @@ const UserData = (() => {
       taskContainerElement.appendChild(taskElement);
       taskElement.textContent = doc.data().title;
     });
+  }
+  
+  const displayInboxData = async (database, uid, parentDiv) => {
+    // get inbox container path
+    const inboxPath = `user-data/${uid}/containers/inbox`;
+
+    displayContainerTitle(inboxPath, parentDiv);
   };
 
   const displayUserData = (database, uid) => {
