@@ -52,6 +52,8 @@ const UserData = (() => {
   const displayInboxData = async (database, uid, parentDiv) => {
     // get inbox container path
     const inboxPath = `user-data/${uid}/containers/inbox`;
+
+    displayContainerTitle(inboxPath, parentDiv);
     
     // create task container div
     const taskContainerElement = document.createElement("div");
