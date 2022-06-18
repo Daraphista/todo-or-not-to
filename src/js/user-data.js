@@ -32,6 +32,8 @@ const setNewUserData = (user) => {
 export { setNewUserData };
 
 const UserData = (() => {
+  const displayContainerTitle = (containerTitlePath) => {};
+
   const displayInboxData = async (database, uid, parentDiv) => {
     // create inbox container element
     const inboxContainerElement = document.createElement("div");
