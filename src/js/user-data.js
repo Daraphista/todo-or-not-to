@@ -61,6 +61,11 @@ const UserData = (() => {
 
     const tasksQuery = query(collection(database, inboxTasksPath));
     const tasksSnapshot = await getDocs(tasksQuery);
+    tasksSnapshot.forEach((doc) => {
+      const taskElement = document.createElement("div");
+      taskContainerElement.appendChild(taskElement);
+      taskElement.textContent = doc.data().title;
+    });
   };
 
   const displayUserData = (database, uid) => {
