@@ -32,13 +32,13 @@ export { setNewUserData };
 
 const UserData = (() => {
   const displayContainerTitle = (containerTitlePath, parentDiv) => {
-    // create inbox container heading
+    // create container heading element
     const containerHeaderElement = document.createElement("h1");
     parentDiv.appendChild(containerHeaderElement);
     
-    // read and listen to the inbox container document
+    // read and listen to the container document
     const unsubToInbox = onSnapshot(doc(database, containerTitlePath), (doc) => {
-      // set inboxHeaderElement's textContent to the inbox container document's title
+      // set ContainerHeaderElement's textContent to the inbox container document's title
       containerHeaderElement.textContent = doc.data().title;
     });
   };
