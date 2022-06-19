@@ -9,8 +9,6 @@ import {
   onSnapshot,
   query,
 } from "firebase/firestore";
-import { async } from "@firebase/util";
-import { container } from "webpack";
 
 const setNewUserData = (user) => {
   // set document using user id as it's id
