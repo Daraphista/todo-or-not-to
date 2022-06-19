@@ -2,4 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {}
+@layer components {
+  h1 {
+    @apply text-white text-[2.5rem] capitalize;
+  }
+}
