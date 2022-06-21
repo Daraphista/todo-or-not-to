@@ -28,3 +28,5 @@ const AuthenticationPopup = () => {
     </div>
   );
 };
+
+export default AuthenticationPopup
