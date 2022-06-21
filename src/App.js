@@ -2,7 +2,7 @@ import "./index.css";
 
 const App = () => {
   return (
-    <div>
+    <div className="flex min-h-screen">
       
     </div>
   )
