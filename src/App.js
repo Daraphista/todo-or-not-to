@@ -1,4 +1,5 @@
 import "./index.css";
+import AuthenticationPopup from "./AuthenticationPopup";
 
 const App = () => {
   return (
