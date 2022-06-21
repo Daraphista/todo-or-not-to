@@ -1,4 +1,4 @@
-const Authentication = () => {
+const AuthenticationPopup = () => {
   return (
     <div></div>
   );
