@@ -1,4 +1,9 @@
 import blob1 from "./assets/images/blob-1.svg";
+import blob2 from "./assets/images/blob-2.svg";
+import blob3 from "./assets/images/blob-3.svg";
+import blob4 from "./assets/images/blob-4.svg";
+import blob5 from "./assets/images/blob-5.svg";
+import blob6 from "./assets/images/blob-6.svg";
 
 const Background = () => {
   return (
