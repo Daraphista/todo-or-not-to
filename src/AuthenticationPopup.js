@@ -1,3 +1,5 @@
+import blob1 from "./assets/images/blob-1.svg";
+
 const Background = () => {
   return (
     <div className="background grid grid-cols-[448px_448px] absolute z-[-1]">
