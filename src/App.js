@@ -1,5 +1,11 @@
 import "./index.css";
 
-const App = () => {};
+const App = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+};
 
 export default App;
