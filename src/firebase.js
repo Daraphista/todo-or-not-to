@@ -21,3 +21,4 @@ export { auth };
 
 // Initialize Firestore
 const database = getFireStore(app);
+export { database };
