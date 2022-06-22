@@ -8,6 +8,7 @@ import blob6 from "./assets/images/blob-6.svg";
 import { useAuthState, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "./firebase"
 import { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const AuthenticationPopup = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -51,7 +52,12 @@ const SignInForm = () => {
 
   return (
     <form
-      className="sign-in shadow-lg scale-0 backdrop-blur-lg bg-white/[0.05] hidden flex-col gap-8 text-center min-w-[25rem] rounded-xl px-8 py-9 animate-[grow_250ms_600ms] animation-fill-forwards">
+      className="sign-in shadow-lg scale-0 backdrop-blur-lg bg-white/[0.05] hidden flex-col gap-8 text-center min-w-[25rem] rounded-xl px-8 py-9 animate-[grow_250ms_600ms] animation-fill-forwards"
+      onSubmit={e => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password);
+      }}
+      >
       <h1 className="text-4xl">Sign In</h1>
       <div className="picker flex">
         <button className="sign-in flex-1 bg-[#393939]/[0.8] rounded-l-md py-2" type="button">Sign In</button>
