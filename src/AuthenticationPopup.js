@@ -59,7 +59,9 @@ const SignInForm = () => {
       </div>
       <label>
         <input type="email" id="email" placeholder="Email Address"
-          className="w-full bg-transparent rounded-md py-2 px-3 border-neutral-300 border placeholder:text-neutral-300" />
+          className="w-full bg-transparent rounded-md py-2 px-3 border-neutral-300 border placeholder:text-neutral-300" 
+          onInput={e => setEmail(e.value)}
+        />
       </label>
       <label>
         <input type="password" id="password" placeholder="Password"
