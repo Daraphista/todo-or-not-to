@@ -8,6 +8,7 @@ import blob6 from "./assets/images/blob-6.svg";
 import {
   useAuthState,
   useSignInWithEmailAndPassword,
+  useCreateUserWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
 import { useState } from "react";
