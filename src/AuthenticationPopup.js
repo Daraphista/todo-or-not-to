@@ -65,7 +65,9 @@ const SignInForm = () => {
       </label>
       <label>
         <input type="password" id="password" placeholder="Password"
-          className="w-full bg-transparent rounded-md py-2 px-3 border-neutral-300 border placeholder:text-neutral-300" />
+          className="w-full bg-transparent rounded-md py-2 px-3 border-neutral-300 border placeholder:text-neutral-300" 
+          onInput={e => setPassword(e.value)}
+        />
       </label>
       <button className="sign-in flex-1 bg-[#393939]/[0.8] rounded-md py-2">Sign In</button>
       <p className="picker text-neutral-300">
