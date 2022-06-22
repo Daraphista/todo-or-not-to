@@ -170,6 +170,7 @@ const SignUpForm = () => {
           id="password"
           placeholder="Password"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
+          onInput={e => setPassword(e.value)}
         />
       </label>
       <label>
