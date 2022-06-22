@@ -113,7 +113,7 @@ const SignInForm = (props) => {
           id="email"
           placeholder="Email Address"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
-          onInput={(e) => setEmail(e.value)}
+          onInput={(e) => setEmail(e.target.value)}
         />
       </label>
       <label>
@@ -122,7 +122,7 @@ const SignInForm = (props) => {
           id="password"
           placeholder="Password"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
-          onInput={(e) => setPassword(e.value)}
+          onInput={(e) => setPassword(e.target.value)}
         />
       </label>
       <button className="sign-in flex-1 rounded-md bg-[#393939]/[0.8] py-2">
@@ -178,7 +178,7 @@ const SignUpForm = (props) => {
           id="email"
           placeholder="Email Address"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
-          onInput={(e) => setEmail(e.value)}
+          onInput={(e) => setEmail(e.target.value)}
         />
       </label>
       <label>
@@ -187,7 +187,7 @@ const SignUpForm = (props) => {
           id="password"
           placeholder="Password"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
-          onInput={(e) => setPassword(e.value)}
+          onInput={(e) => setPassword(e.target.value)}
         />
       </label>
       <label>
