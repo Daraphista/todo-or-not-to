@@ -5,6 +5,21 @@ import blob4 from "./assets/images/blob-4.svg";
 import blob5 from "./assets/images/blob-5.svg";
 import blob6 from "./assets/images/blob-6.svg";
 
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./firebase"
+
+const AuthenticationPopup = () => {
+  const [user, loading, error] = useAuthState(auth);
+
+  return (
+    <div className={`authentication fixed ${user ? "hidden" : "flex"} h-full w-full items-center justify-center bg-[#2C2B2B] text-white transition-opacity duration-200`}>
+      <Background />
+    </div>
+  );
+};
+
+export default AuthenticationPopup
+
 const Background = () => {
   return (
     <div className="background grid grid-cols-[448px_448px] absolute z-[-1]">
@@ -25,18 +40,3 @@ const Background = () => {
     </div>
   )
 }
-
-import { useAuthState } from "react-firebase-hooks";
-import { auth } from "./firebase"
-
-const AuthenticationPopup = () => {
-  const [user, loading, error] = useAuthState(auth);
-
-  return (
-    <div className="authentication fixed hidden h-full w-full items-center justify-center bg-[#2C2B2B] text-white transition-opacity duration-200">
-      <Background />
-    </div>
-  );
-};
-
-export default AuthenticationPopup
