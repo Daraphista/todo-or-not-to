@@ -14,6 +14,7 @@ const AuthenticationPopup = () => {
   return (
     <div className={`authentication fixed ${user ? "hidden" : "flex"} h-full w-full items-center justify-center bg-[#2C2B2B] text-white transition-opacity duration-200`}>
       <Background />
+      <SignInForm />
     </div>
   );
 };
