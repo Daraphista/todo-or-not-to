@@ -12,7 +12,6 @@ import {
 } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
 import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
 
 const AuthenticationPopup = () => {
   const [user, loading, error] = useAuthState(auth);
