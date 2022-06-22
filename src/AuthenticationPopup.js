@@ -46,6 +46,8 @@ const Background = () => {
 const SignInForm = () => {
   const [SignInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
+  const [email, setEmail] = useState("");
+
   return (
     <form
       class="sign-in shadow-lg scale-0 backdrop-blur-lg bg-white/[0.05] hidden flex-col gap-8 text-center min-w-[25rem] rounded-xl px-8 py-9 animate-[grow_250ms_600ms] animation-fill-forwards">
