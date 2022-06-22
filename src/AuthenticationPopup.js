@@ -73,7 +73,7 @@ const Background = () => {
   );
 };
 
-const SignInForm = () => {
+const SignInForm = (props) => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
