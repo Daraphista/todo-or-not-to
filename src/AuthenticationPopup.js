@@ -71,7 +71,7 @@ const Background = () => {
 };
 
 const SignInForm = () => {
-  const [SignInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   const [email, setEmail] = useState("");
