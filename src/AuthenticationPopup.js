@@ -161,6 +161,7 @@ const SignUpForm = () => {
           id="email"
           placeholder="Email Address"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
+          onInput={e => setEmail(e.value)}
         />
       </label>
       <label>
