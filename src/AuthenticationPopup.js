@@ -5,7 +5,7 @@ import blob4 from "./assets/images/blob-4.svg";
 import blob5 from "./assets/images/blob-5.svg";
 import blob6 from "./assets/images/blob-6.svg";
 
-import { useAuthState } from "react-firebase-hooks/auth";
+import { useAuthState, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "./firebase"
 
 const AuthenticationPopup = () => {
