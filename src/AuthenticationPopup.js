@@ -129,3 +129,35 @@ const SignInForm = () => {
     </form>
   );
 };
+
+const SignUpForm = () => {
+  return (
+    <form
+      class="sign-up shadow-lg scale-0 backdrop-blur-lg bg-white/[0.05] hidden flex-col gap-8 text-center min-w-[25rem] rounded-xl px-8 py-9 animate-[grow_250ms_600ms] animation-fill-forwards">
+      <h1 class="text-4xl">Sign In</h1>
+      <div class="picker flex">
+        <button class="sign-in flex-1 bg-[#2C2B2B]/[0.8] rounded-l-md py-2" type="button">Sign In</button>
+        <button class="sign-up flex-1 bg-[#393939]/[0.8] rounded-r-md py-2" type="button">Sign Up</button>
+      </div>
+      <label>
+        <input type="email" id="email" placeholder="Email Address"
+          class="w-full bg-transparent rounded-md py-2 px-3 border-neutral-300 border placeholder:text-neutral-300"
+        />
+      </label>
+      <label>
+        <input type="password" id="password" placeholder="Password"
+          class="w-full bg-transparent rounded-md py-2 px-3 border-neutral-300 border placeholder:text-neutral-300"
+        />
+      </label>
+      <label>
+        <input type="password" id="confirm-password" placeholder="Confirm Password"
+          class="w-full bg-transparent rounded-md py-2 px-3 border-neutral-300 border placeholder:text-neutral-300"
+        />
+      </label>
+      <button class="sign-up flex-1 bg-[#393939]/[0.8] rounded-md py-2">Sign Up</button>
+      <p class="picker text-neutral-300">
+        Already have an account? <a href="" class="sign-in text-white">Sign in now</a>
+      </p>
+    </form>
+  )
+}
