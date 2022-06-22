@@ -27,7 +27,7 @@ const AuthenticationPopup = () => {
     >
       <Background />
       <SignInForm signInFormIsShown={signInFormIsShown} />
-      <SignUpForm />
+      <SignUpForm signUpFormIsShown={signUpFormIsShown} />
     </div>
   );
 };
