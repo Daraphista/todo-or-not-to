@@ -7,6 +7,7 @@ import blob6 from "./assets/images/blob-6.svg";
 
 import { useAuthState, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "./firebase"
+import { useState } from "react";
 
 const AuthenticationPopup = () => {
   const [user, loading, error] = useAuthState(auth);
