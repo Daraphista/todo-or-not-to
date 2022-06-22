@@ -74,6 +74,8 @@ const Background = () => {
 };
 
 const SignInForm = (props) => {
+  const { signInFormIsShown } = props;
+
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
