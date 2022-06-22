@@ -89,7 +89,7 @@ const SignInForm = (props) => {
       } min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg fill-mode-forwards`}
       onSubmit={(e) => {
         e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password);
+        signInWithEmailAndPassword(email, password);
       }}
     >
       <h1 className="text-4xl">Sign In</h1>
