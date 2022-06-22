@@ -82,7 +82,7 @@ const SignInForm = () => {
 
   return (
     <form
-      className="sign-in animation-fill-forwards hidden min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg"
+      className="sign-in fill-mode-forwards hidden min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg"
       onSubmit={(e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password);
@@ -143,7 +143,7 @@ const SignUpForm = () => {
 
   return (
     <form
-      className="sign-up animation-fill-forwards hidden min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg"
+      className="sign-up fill-mode-forwards hidden min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg"
       onSubmit={(e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(email, password);
