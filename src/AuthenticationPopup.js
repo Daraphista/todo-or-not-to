@@ -27,6 +27,7 @@ const Background = () => {
 }
 
 import { useAuthState } from "react-firebase-hooks";
+import { auth } from "./firebase"
 
 const AuthenticationPopup = () => {
   return (
