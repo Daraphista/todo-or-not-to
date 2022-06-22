@@ -25,6 +25,7 @@ const AuthenticationPopup = () => {
     >
       <Background />
       <SignInForm />
+      <SignUpForm />
     </div>
   );
 };
