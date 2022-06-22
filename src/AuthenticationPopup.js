@@ -139,6 +139,8 @@ const SignInForm = (props) => {
 };
 
 const SignUpForm = (props) => {
+  const { signUpFormIsShown } = props;
+
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
