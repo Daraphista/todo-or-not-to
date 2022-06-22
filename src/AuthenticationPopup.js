@@ -17,6 +17,7 @@ const AuthenticationPopup = () => {
   const [user, loading, error] = useAuthState(auth);
 
   const [signInFormIsShown, setSignInFormIsShown] = useState(true);
+  const [signUpFormIsShown, setSignUpFormIsShown] = useState(false);
 
   return (
     <div
