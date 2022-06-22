@@ -16,6 +16,8 @@ import { useState } from "react";
 const AuthenticationPopup = () => {
   const [user, loading, error] = useAuthState(auth);
 
+  const [signInFormIsShown, setSignInFormIsShown] = useState(true);
+
   return (
     <div
       className={`authentication fixed ${
