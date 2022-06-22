@@ -82,7 +82,7 @@ const SignInForm = (props) => {
 
   return (
     <form
-      className="sign-in fill-mode-forwards hidden min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg"
+      className="sign-in hidden min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg fill-mode-forwards"
       onSubmit={(e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password);
@@ -143,7 +143,7 @@ const SignUpForm = (props) => {
 
   return (
     <form
-      className="sign-up fill-mode-forwards hidden min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg"
+      className="sign-up hidden min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg fill-mode-forwards"
       onSubmit={(e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(email, password);
@@ -170,7 +170,7 @@ const SignUpForm = (props) => {
           id="email"
           placeholder="Email Address"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
-          onInput={e => setEmail(e.value)}
+          onInput={(e) => setEmail(e.value)}
         />
       </label>
       <label>
@@ -179,7 +179,7 @@ const SignUpForm = (props) => {
           id="password"
           placeholder="Password"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
-          onInput={e => setPassword(e.value)}
+          onInput={(e) => setPassword(e.value)}
         />
       </label>
       <label>
