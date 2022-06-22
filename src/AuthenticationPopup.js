@@ -136,6 +136,7 @@ const SignUpForm = () => {
     useCreateUserWithEmailAndPassword(auth);
 
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <form className="sign-up animation-fill-forwards hidden min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg">
