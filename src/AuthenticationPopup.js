@@ -37,10 +37,10 @@ const AuthenticationPopup = () => {
       <Background />
 
       {signInFormIsShown && (
-        <SignInForm signInFormIsShown={signInFormIsShown} />
+        <SignInForm signInFormIsShown={signInFormIsShown} changeForm={changeForm} />
       )}
       {signUpFormIsShown && (
-        <SignUpForm signUpFormIsShown={signUpFormIsShown} />
+        <SignUpForm signUpFormIsShown={signUpFormIsShown} changeForm={changeForm} />
       )}
     </div>
   );
