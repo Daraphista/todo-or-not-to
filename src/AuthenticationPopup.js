@@ -30,8 +30,13 @@ const AuthenticationPopup = () => {
       } h-full w-full items-center justify-center bg-[#2C2B2B] text-white transition-opacity duration-200`}
     >
       <Background />
-      <SignInForm signInFormIsShown={signInFormIsShown} />
-      <SignUpForm signUpFormIsShown={signUpFormIsShown} />
+
+      {signInFormIsShown && (
+        <SignInForm signInFormIsShown={signInFormIsShown} />
+      )}
+      {signUpFormIsShown && (
+        <SignUpForm signUpFormIsShown={signUpFormIsShown} />
+      )}
     </div>
   );
 };
