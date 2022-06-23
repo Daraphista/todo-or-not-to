@@ -117,6 +117,7 @@ const SignInForm = (props) => {
         <button
           className="sign-up flex-1 rounded-r-md bg-[#2C2B2B]/[0.8] py-2"
           type="button"
+          onClick={changeForm}
         >
           Sign Up
         </button>
