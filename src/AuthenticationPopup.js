@@ -26,7 +26,7 @@ const AuthenticationPopup = () => {
   const changeForm = () => {
     setSignInFormIsShown(!signInFormIsShown);
     setSignUpFormIsShown(!signUpFormIsShown);
-  }
+  };
 
   return (
     <div
@@ -36,12 +36,8 @@ const AuthenticationPopup = () => {
     >
       <Background />
 
-      {signInFormIsShown && (
-        <SignInForm changeForm={changeForm} />
-      )}
-      {signUpFormIsShown && (
-        <SignUpForm changeForm={changeForm} />
-      )}
+      {signInFormIsShown && <SignInForm changeForm={changeForm} />}
+      {signUpFormIsShown && <SignUpForm changeForm={changeForm} />}
     </div>
   );
 };
@@ -149,10 +145,14 @@ const SignInForm = (props) => {
       </button>
       <p className="picker text-neutral-300">
         Not a member yet?{" "}
-        <a href="" className="sign-up text-white" onClick={e => {
-          e.preventDefault();
-          changeForm()
-        }}>
+        <a
+          href=""
+          className="sign-up text-white"
+          onClick={(e) => {
+            e.preventDefault();
+            changeForm();
+          }}
+        >
           Sign up now
         </a>
       </p>
@@ -231,10 +231,14 @@ const SignUpForm = (props) => {
       </button>
       <p className="picker text-neutral-300">
         Already have an account?{" "}
-        <a href="" className="sign-in text-white" onClick={e => {
-          e.preventDefault();
-          changeForm();
-        }}>
+        <a
+          href=""
+          className="sign-in text-white"
+          onClick={(e) => {
+            e.preventDefault();
+            changeForm();
+          }}
+        >
           Sign in now
         </a>
       </p>
