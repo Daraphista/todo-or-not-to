@@ -200,6 +200,7 @@ const SignUpForm = (props) => {
           placeholder="Email Address"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
           onInput={(e) => setEmail(e.target.value)}
+          required
         />
       </label>
       <label>
@@ -209,6 +210,7 @@ const SignUpForm = (props) => {
           placeholder="Password"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
           onInput={(e) => setPassword(e.target.value)}
+          required
         />
       </label>
       <label>
@@ -217,6 +219,7 @@ const SignUpForm = (props) => {
           id="confirm-password"
           placeholder="Confirm Password"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
+          required
         />
       </label>
       <button className="sign-up flex flex-1 justify-center rounded-md bg-[#393939]/[0.8] py-2">
