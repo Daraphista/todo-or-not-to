@@ -161,7 +161,7 @@ const SignInForm = (props) => {
 };
 
 const SignUpForm = (props) => {
-  const { signUpFormIsShown } = props;
+  const { signUpFormIsShown, changeForm } = props;
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
@@ -184,6 +184,7 @@ const SignUpForm = (props) => {
         <button
           className="sign-in flex-1 rounded-l-md bg-[#2C2B2B]/[0.8] py-2"
           type="button"
+          onClick={changeForm}
         >
           Sign In
         </button>
