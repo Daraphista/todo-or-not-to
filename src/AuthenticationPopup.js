@@ -98,9 +98,7 @@ const SignInForm = (props) => {
 
   return (
     <form
-      className={`sign-in ${
-        signInFormIsShown ? "flex" : "hidden"
-      } min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg fill-mode-forwards`}
+      className="sign-in flex min-w-[25rem] scale-0 animate-[grow_250ms_600ms] flex-col gap-8 rounded-xl bg-white/[0.05] px-8 py-9 text-center shadow-lg backdrop-blur-lg fill-mode-forwards"
       onSubmit={(e) => {
         e.preventDefault();
         signInWithEmailAndPassword(email, password);
