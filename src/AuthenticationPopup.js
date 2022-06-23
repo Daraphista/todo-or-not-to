@@ -4,6 +4,7 @@ import blob3 from "./assets/images/blob-3.svg";
 import blob4 from "./assets/images/blob-4.svg";
 import blob5 from "./assets/images/blob-5.svg";
 import blob6 from "./assets/images/blob-6.svg";
+import loadingIcon from "./assets/images/loading-icon.svg";
 
 import {
   useAuthState,
@@ -12,6 +13,9 @@ import {
 } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
 import { useState } from "react";
+import { signOut } from "firebase/auth";
+
+signOut(auth);
 
 const AuthenticationPopup = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -126,7 +130,11 @@ const SignInForm = (props) => {
         />
       </label>
       <button className="sign-in flex-1 rounded-md bg-[#393939]/[0.8] py-2">
-        Sign In
+        {loading ? (
+          <img className="h-6" src={loadingIcon} alt="loading" />
+        ) : (
+          "Sign In"
+        )}
       </button>
       <p className="picker text-neutral-300">
         Not a member yet?{" "}
