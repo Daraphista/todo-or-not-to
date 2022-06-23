@@ -129,7 +129,7 @@ const SignInForm = (props) => {
           onInput={(e) => setPassword(e.target.value)}
         />
       </label>
-      <button className="sign-in flex justify-center flex-1 rounded-md bg-[#393939]/[0.8] py-2">
+      <button className="sign-in flex flex-1 justify-center rounded-md bg-[#393939]/[0.8] py-2">
         {loading ? (
           <img className="h-6" src={loadingIcon} alt="loading" />
         ) : (
@@ -207,7 +207,11 @@ const SignUpForm = (props) => {
         />
       </label>
       <button className="sign-up flex-1 rounded-md bg-[#393939]/[0.8] py-2">
-        Sign Up
+        {loading ? (
+          <img className="h6" src={loadingIcon} alt="loading" />
+        ) : (
+          "Sign Up"
+        )}
       </button>
       <p className="picker text-neutral-300">
         Already have an account?{" "}
