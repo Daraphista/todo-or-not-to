@@ -127,6 +127,7 @@ const SignInForm = (props) => {
           placeholder="Email Address"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
           onInput={(e) => setEmail(e.target.value)}
+          required
         />
       </label>
       <label>
@@ -136,6 +137,7 @@ const SignInForm = (props) => {
           placeholder="Password"
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
           onInput={(e) => setPassword(e.target.value)}
+          required
         />
       </label>
       <button className="sign-in flex flex-1 justify-center rounded-md bg-[#393939]/[0.8] py-2">
