@@ -206,7 +206,7 @@ const SignUpForm = (props) => {
           className="w-full rounded-md border border-neutral-300 bg-transparent py-2 px-3 placeholder:text-neutral-300"
         />
       </label>
-      <button className="sign-up flex-1 rounded-md bg-[#393939]/[0.8] py-2">
+      <button className="sign-up flex flex-1 justify-center rounded-md bg-[#393939]/[0.8] py-2">
         {loading ? (
           <img className="h6" src={loadingIcon} alt="loading" />
         ) : (
