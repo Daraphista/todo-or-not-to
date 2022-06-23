@@ -40,7 +40,7 @@ const AuthenticationPopup = () => {
         <SignInForm changeForm={changeForm} />
       )}
       {signUpFormIsShown && (
-        <SignUpForm signUpFormIsShown={signUpFormIsShown} changeForm={changeForm} />
+        <SignUpForm changeForm={changeForm} />
       )}
     </div>
   );
@@ -159,7 +159,7 @@ const SignInForm = (props) => {
 };
 
 const SignUpForm = (props) => {
-  const { signUpFormIsShown, changeForm } = props;
+  const { changeForm } = props;
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
