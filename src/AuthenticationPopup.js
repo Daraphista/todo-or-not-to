@@ -23,6 +23,11 @@ const AuthenticationPopup = () => {
   const [signInFormIsShown, setSignInFormIsShown] = useState(true);
   const [signUpFormIsShown, setSignUpFormIsShown] = useState(false);
 
+  const changeForm = () => {
+    setSignInFormIsShown(!signInFormIsShown);
+    setSignUpFormIsShown(!signUpFormIsShown);
+  }
+
   return (
     <div
       className={`authentication fixed ${
