@@ -175,7 +175,7 @@ const SignUpForm = (props) => {
         createUserWithEmailAndPassword(email, password);
       }}
     >
-      <h1 className="text-4xl">Sign In</h1>
+      <h1 className="text-4xl">Sign Up</h1>
       <div className="picker flex">
         <button
           className="sign-in flex-1 rounded-l-md bg-[#2C2B2B]/[0.8] py-2"
