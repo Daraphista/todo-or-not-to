@@ -230,7 +230,10 @@ const SignUpForm = (props) => {
       </button>
       <p className="picker text-neutral-300">
         Already have an account?{" "}
-        <a href="" className="sign-in text-white">
+        <a href="" className="sign-in text-white" onClick={e => {
+          e.preventDefault();
+          changeForm();
+        }}>
           Sign in now
         </a>
       </p>
