@@ -149,7 +149,10 @@ const SignInForm = (props) => {
       </button>
       <p className="picker text-neutral-300">
         Not a member yet?{" "}
-        <a href="" className="sign-up text-white">
+        <a href="" className="sign-up text-white" onClick={e => {
+          e.preventDefault();
+          changeForm()
+        }}>
           Sign up now
         </a>
       </p>
